@@ -13,7 +13,6 @@
                         <input id="from" formControlName="from" placeholder="Откуда: начните вводить адрес" autocomplete="off" />
                         <div class="main-ac" id="fromAc" role="listbox" aria-label="Подсказки адресов"></div>
                     </div>
-
                     <div class="main-field" id="toField">
                         <div class="main-pin"></div>
                         <input id="to" formControlName="to" placeholder="Куда: начните вводить адрес" autocomplete="off" />
@@ -23,11 +22,10 @@
             </div>
             <div class="main-package" [style.display]="orderId() ? 'none' : null">
                 <div class="main-block-title">Размер посылки</div>
-
                 <div class="main-sizes">
                     @for (size of sizes; track size.value) {
                     <div class="main-size-card" [class.is-active]="routeForm.value.size === size.value"
-                        (click)="selectSize(size.value)">
+                            (click)="selectSize(size.value)">
                         <div class="main-size-top">
                             <div class="main-size-label">{{ size.value | uppercase }}</div>
                             <div class="main-size-rate">{{ size.rate }} ₽/км</div>
@@ -42,11 +40,10 @@
             </div>
             <div class="main-speed" [style.display]="orderId() ? 'none' : null">
                 <div class="main-block-title">Скорость доставки</div>
-
                 <div class="main-speeds">
                     @for (speed of speeds; track speed.value) {
                     <div class="main-speed-card" [class.is-active]="routeForm.value.speed === speed.value"
-                        (click)="selectSpeed(speed.value)">
+                            (click)="selectSpeed(speed.value)">
                         <img class="main-speed-media" src="images/icons/{{speed.value}}.svg" alt="Speed" />
                         <div class="main-speed-description">{{ speed.label }}</div>
                     </div>
@@ -93,7 +90,6 @@
                         заявку
                     </button>
                 </div>
-
                 <div class="main-order-success" id="orderSuccess" [class.is-visible]="orderId()">
                     <div class="main-success-icon">✓</div>
                     <div class="main-success-title">Заявка отправлена!</div>
@@ -102,6 +98,4 @@
                 </div>
             </div>
         </div>
-    </div>
-
 </aside>
