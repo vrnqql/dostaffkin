@@ -1,5 +1,5 @@
 .container {
-    overflow: hidden; /* не влазит на страницу - скрывается */
+    overflow: hidden;
     min-height: 100vh;
 }
 
@@ -10,14 +10,13 @@
 }
 
 .main-info {
-    padding: 0 40px 40px;
     max-width: 840px;
     width: 100%;
     position: relative;
 }
 
 .main-title {
-    margin-top: 50px;
+    margin-top: 98px;
     font-weight: 500;
     font-size: 200px;
     line-height: 1;
